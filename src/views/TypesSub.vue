@@ -10,7 +10,7 @@
 
 <script>
 import * as typesService from '../services/typesService'
-import TypesTable from './TypesTable'
+import TypesTable from '../components/TypesTable'
 
 export default {
   name: 'TypesSub',

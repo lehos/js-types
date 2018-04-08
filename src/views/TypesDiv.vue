@@ -3,17 +3,17 @@
     <TypesTable 
       :types="types" 
       :func="func" 
-      operand="*"
+      operand="/"
     />
   </div>
 </template>
 
 <script>
 import * as typesService from '../services/typesService'
-import TypesTable from './TypesTable'
+import TypesTable from '../components/TypesTable'
 
 export default {
-  name: 'TypesMult',
+  name: 'TypesDiv',
 
   components: {
     TypesTable
@@ -27,7 +27,7 @@ export default {
 
   methods: {
     func(val1, val2) {
-      return val1 * val2
+      return val1 / val2
     },
   },
 }

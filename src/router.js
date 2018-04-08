@@ -1,8 +1,8 @@
 import VueRouter from 'vue-router'
-import TypesSum from './components/TypesSum'
-import TypesSub from './components/TypesSub'
-import TypesMult from './components/TypesMult'
-import TypesDiv from './components/TypesDiv'
+import TypesSum from './views/TypesSum'
+import TypesSub from './views/TypesSub'
+import TypesMult from './views/TypesMult'
+import TypesDiv from './views/TypesDiv'
 
 export default new VueRouter({
   routes: [
