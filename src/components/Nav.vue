@@ -4,10 +4,11 @@
 
         <nav class="nav">
             <div class="nav-inner">
-                <router-link to="/sum">summation</router-link>
-                <router-link to="/sub">subtraction</router-link>
-                <router-link to="/mult">multiplication</router-link>
-                <router-link to="/div">division</router-link>
+                <router-link to="/sum">sum</router-link>
+                <router-link to="/subtract">subtract</router-link>
+                <router-link to="/multiply">multiply</router-link>
+                <router-link to="/divide">divide</router-link>
+                <router-link to="/compare">compare</router-link>
             </div>
         </nav>
     </h1>
@@ -50,7 +51,7 @@ h1 {
     text-decoration: none;
     border-bottom: 1px dotted;
     color: cornflowerblue;
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 .nav a:hover {

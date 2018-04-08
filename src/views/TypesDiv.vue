@@ -27,7 +27,7 @@ export default {
 
   methods: {
     func(val1, val2) {
-      return val1 / val2
+      return typesService.normalizeResult(val1 / val2)
     },
   },
 }

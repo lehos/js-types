@@ -19,7 +19,15 @@ export const types = [
   { val: -Infinity, key: '-Infinity' }
 ]
 
+export const additionalTypes = [
+  { val: 1, key: '1' },
+  { val: '1', key: `'1'` },
+]
+
 export function getTypes() {
-    Object.freeze(types)
-    return types
+    return Object.freeze(types)
+}
+
+export function getExtendedTypes() {
+    return Object.freeze([...additionalTypes, ...types])
 }

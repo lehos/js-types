@@ -1,9 +1,9 @@
 <template>
-  <div class="types-sub">
+  <div class="types-comp">
     <TypesTable 
       :types="types" 
       :func="func" 
-      operand="-"
+      operand="=="
     />
   </div>
 </template>
@@ -13,7 +13,7 @@ import * as typesService from '../services/typesService'
 import TypesTable from '../components/TypesTable'
 
 export default {
-  name: 'TypesSub',
+  name: 'TypesComp',
 
   components: {
     TypesTable
@@ -21,14 +21,25 @@ export default {
 
   data() {
     return {
-      types: typesService.getTypes(),
+      types: typesService.getExtendedTypes(),
     }
   },
 
   methods: {
     func(val1, val2) {
-      return typesService.normalizeResult(val1 - val2)
+      return val1 == val2 ? '<span class="box"></span>' : ''
     },
-  }
+  },
 }
 </script>
+
+<style>
+.box {
+  display: inline-block;
+  background-color: forestgreen;
+  width: 10px;
+  height: 10px;
+}
+
+</style>
+

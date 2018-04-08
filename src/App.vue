@@ -3,6 +3,7 @@
     <Nav/>
     <router-view></router-view>
 
+    <br>
     -- <br>
     <a href="https://github.com/lehos/js-types">github</a>
   </div>
