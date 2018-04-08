@@ -2,6 +2,9 @@
   <div id="app">
     <Nav/>
     <router-view></router-view>
+
+    -- <br>
+    <a href="https://github.com/lehos/js-types">github</a>
   </div>
 </template>
 
