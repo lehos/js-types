@@ -1,21 +1,10 @@
 <template>
   <div class="types-sum">
-    <h1>JS types summation</h1>
-    <table>
-      <tr>
-        <th>+</th>
-        <th v-for="typeCol in types" :key="typeCol.key">{{typeCol.key}}</th>
-      </tr>
-      <tr v-for="typeRow in types" :key="typeRow.key">
-        <th>{{typeRow.key}}</th>
-        <td v-for="typeCol in types" 
-          :key="typeCol.key" 
-          :title="`${typeRow.key} + ${typeCol.key}`"
-        >
-          {{sum(typeRow.val, typeCol.val)}}
-        </td>
-      </tr>
-    </table>
+    <TypesTable 
+      :types="types" 
+      :func="func" 
+      operand="+"
+    />
 
     <p>
       This table represents honest JS types summation result.
@@ -29,74 +18,26 @@
 </template>
 
 <script>
+import * as typesService from '../services/typesService'
+import TypesTable from './TypesTable'
+
 export default {
   name: 'TypesSum',
 
-  data() {
-    const types = [
-      { val: 0, key: '0' },
-      { val: '0', key: `'0'` },
-      { val: '', key: `''` },
-      { val: null, key: 'null' },
-      { val: undefined, key: 'undefined' }, 
-      { val: {}, key: '{}' },
-      { val: [], key: '[]' },
-      { val: NaN, key: 'NaN' },
-      { val: Infinity, key: 'Infinity' },
-      { val: -Infinity, key: '-Infinity' }
-    ]
+  components: {
+    TypesTable
+  },
 
-    Object.freeze(types)
+  data() {
     return {
-      types,
+      types: typesService.getTypes(),
     }
   },
 
   methods: {
-    sum(val1, val2) {
-      let result = val1 + val2
-      return this.normalizeResult(result)
+    func(val1, val2) {
+      return val1 + val2
     },
-
-    normalizeResult(result) {
-      return typeof(result) == 'string' && result.length == 0 ? `''` : result
-    }
   },
-
-  created() {
-
-  }
 }
 </script>
-
-<style scoped>
-table {
-  border-collapse: collapse;
-  overflow: hidden;
-}
-tr:hover {
-  background-color: #ffa;
-}
-td, th {
-  border: 1px solid #000;
-  padding: 5px;
-  text-align: center;
-  position: relative;
-}
-td:hover::after,
-th:hover::after {
-  content: "";
-  position: absolute;
-  background-color: #ffa;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
-}
-code {
-  background: #eee;
-  padding: 3px;
-  border-radius: 5px 3px;
-}
-</style>

@@ -1,24 +1,55 @@
 <template>
   <div id="app">
-    <TypesSum/>
+    <Nav/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TypesSum from './components/TypesSum.vue'
+import Nav from './components/Nav.vue'
 
 export default {
   name: 'app',
+
   components: {
-    TypesSum
-  }
+    Nav
+  },
 }
 </script>
 
 <style>
 body {
   font-family: Helvetica;
-  font-size: 13px;
+  font-size: 12px;
+}
+table {
+  border-collapse: collapse;
+  overflow: hidden;
+}
+tr:hover {
+  background-color: #ffa;
+}
+td, th {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+code {
+  background: #eee;
+  padding: 3px;
+  border-radius: 5px 3px;
 }
 
 </style>
