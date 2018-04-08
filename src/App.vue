@@ -30,7 +30,7 @@ tr:hover {
   background-color: #ffa;
 }
 td, th {
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   padding: 5px;
   text-align: center;
   position: relative;

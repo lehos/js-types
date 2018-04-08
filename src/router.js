@@ -6,7 +6,8 @@ import TypesDiv from './views/TypesDiv'
 
 export default new VueRouter({
   routes: [
-    { path: '/', component: TypesSum },
+    { path: '/', redirect: '/sum' },
+    { path: '/sum', component: TypesSum },
     { path: '/sub', component: TypesSub },
     { path: '/mult', component: TypesMult },
     { path: '/div', component: TypesDiv },
