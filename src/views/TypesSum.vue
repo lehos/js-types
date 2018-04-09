@@ -7,12 +7,12 @@
     />
 
     <p>
-      This table represents honest JS types summation result.
+      This table represents honest JS types summation results.
     </p>
     <p>
       For example, <code>{} + null</code> in console returns <code>0</code>,
-      but more real-world example <code>console.log({} + null)</code> 
-      (or <code>let a = {} + null; console.log(a)</code>) returns <code>[object Object]null</code>
+      but more real-world example  <code>let a = {} + null; console.log(a)</code> 
+      returns <code>[object Object]null</code>
     </p>
   </div>
 </template>

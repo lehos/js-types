@@ -4,7 +4,12 @@
     <router-view></router-view>
 
     <br>
-    -- <br>
+    <p>
+      Useful articles: 
+      <a href="https://medium.freecodecamp.org/js-type-coercion-explained-27ba3d9a2839">JS type coercion explained</a>
+    </p>
+    -- 
+    <br>
     <a href="https://github.com/lehos/js-types">github</a>
   </div>
 </template>
