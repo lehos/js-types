@@ -1,11 +1,20 @@
-Table with JS cross-types operations and types coercion
+# JS types coercion
 
-# Install
+## Description
+
+Tables with JS cross-types operations and types coercion
+
+App is built using vue & scaffolded with vue-cli@3.0
+
+## Install
+
     npm i
 
-# Run
+## Run
+
     npm run serve
 
-# Build
+## Build
+
     npm run build
 built app goes to ```/docs``` folder (for github-pages)
