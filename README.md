@@ -1,4 +1,4 @@
-Table with JS cross-types operations and types coersion
+Table with JS cross-types operations and types coercion
 
 # Install
     npm i
