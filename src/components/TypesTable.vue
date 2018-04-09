@@ -1,7 +1,7 @@
 <template>
   <table>
     <tr>
-      <th>{{operand}}</th>
+      <th>{{operator}}</th>
       <th v-for="typeCol in types" :key="typeCol.key">
         {{typeCol.key}}
       </th>
@@ -11,7 +11,7 @@
       <th>{{typeRow.key}}</th>
       <td v-for="typeCol in types" 
         :key="typeCol.key" 
-        :title="`${typeRow.key} ${operand} ${typeCol.key}`"
+        :title="`${typeRow.key} ${operator} ${typeCol.key}`"
         v-html="calc(typeRow.val, typeCol.val)"
       />
     </tr>
@@ -25,7 +25,7 @@ export default {
   props: {
     types: Array,
     wrapClass: String,
-    operand: String,
+    operator: String,
     func: Function,
   },
 

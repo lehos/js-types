@@ -3,7 +3,7 @@
     <TypesTable 
       :types="types" 
       :func="func" 
-      operand="/"
+      operator="/"
     />
   </div>
 </template>
